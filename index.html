@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <container>
+        <section class="weatherApp">
+
+            <container class="mainApp">
+                <h1>The weather today is:</h1>
+                <main id="temp">0º</main>
+                <city>city example</city>
+                <description> description example</description>
+            </container>
+
+            <container class="midApp">
+
+                <container class="buttonSelect">
+                    <input type="text" class="inputCity" placeholder="Enter city name" autofocus><br>
+                    <a class="buttonApp" href="#" onclick="getWeather()">Get Weather</a>
+                    <container class="languageForm">
+                        <label for="language">Select language: </label>
+                        <select name="language" id="lang" onchange="selectLanguage()">
+                            <option value="english">English</option>
+                            <option value="spanish">Español</option>
+                        </select>
+                    </container>
+                </container>
+
+                <container class="weatherForm">
+                    <radio>
+                        <label for="metric">Celsius</label>
+                        <input name="tempType" type="radio" id="metric" value="metric" checked>
+                        <label for="imperial">Fahrenheit</label>
+                        <input name="tempType" type="radio" id="imperial" value="imperial">
+                        <label for="standard">Kelvin</label>
+                        <input name="tempType" type="radio" id="standard" value="standard">
+                    </radio>
+                </container>
+                
+            </container>
+
+        </section>
+    </container>
+</body>
+<script src="./myScript.js"></script>
+</html>
