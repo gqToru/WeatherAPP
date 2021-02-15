@@ -39,7 +39,7 @@ function getWeather() {
 	let cityName = document.querySelector('.inputCity').value;
 
 	let results = fetch(
-		'http://api.openweathermap.org/data/2.5/weather?q=' +
+		'https://api.openweathermap.org/data/2.5/weather?q=' +
 			cityName +
 			'&lang=' +
 			selectedLanguage +
