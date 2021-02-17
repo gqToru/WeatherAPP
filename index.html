@@ -9,21 +9,20 @@
 <body>
     <container>
         <section class="weatherApp">
-
             <container class="mainApp">
                 <h1>The weather today is:</h1>
                 <main id="temp">0º</main>
-                <city>city example</city>
-                <description> description example</description>
+                <city></city>
+                <description> </description>
             </container>
 
             <container class="midApp">
 
                 <container class="buttonSelect">
                     <input type="text" class="inputCity" placeholder="Enter city name" autofocus><br>
-                    <a class="buttonApp" href="#" onclick="getWeather()">Get Weather</a>
+                    <!-- <a class="buttonApp" href="#" onclick="getWeather()">Get Weather</a> -->
                     <container class="languageForm">
-                        <label for="language">Select language: </label>
+                        <label id="languageSelect_id" for="language">Select language:</label>                        
                         <select name="language" id="lang" onchange="selectLanguage()">
                             <option value="english">English</option>
                             <option value="spanish">Español</option>

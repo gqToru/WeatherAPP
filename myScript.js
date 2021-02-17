@@ -39,7 +39,7 @@ function getWeather() {
 	let cityName = document.querySelector('.inputCity').value;
 
 	let results = fetch(
-		'https://api.openweathermap.org/data/2.5/weather?q=' +
+		'http://api.openweathermap.org/data/2.5/weather?q=' +
 			cityName +
 			'&lang=' +
 			selectedLanguage +
@@ -63,7 +63,20 @@ function getWeather() {
 function selectLanguage() {
 	if (document.querySelector('select').value == 'spanish') {
 		selectedLanguage = 'es';
+		document.querySelector('h1').innerHTML = 'El clima hoy es:';
+		document.querySelector('#languageSelect_id').innerHTML = 'Seleccionar idioma:';
+		document.querySelector('.inputCity').placeholder = 'Introduzca una ciudad';
 	} else {
 		selectedLanguage = 'en';
+		document.querySelector('h1').innerHTML = 'The weather today is:';
+		document.querySelector('#languageSelect_id').innerHTML = 'Select language:';
+		document.querySelector('.inputCity').placeholder = 'Enter city name';
 	}
 }
+
+document.querySelector('.inputCity').addEventListener('keyup', function(event) {
+	event.preventDefault();
+	if (event.keyCode === 13) {
+		getWeather();
+	}
+});

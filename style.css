@@ -26,7 +26,6 @@ section {
 main {
 	font-size: 64px;
 	color: white;
-	display: flex;
 }
 
 h1,
@@ -74,7 +73,8 @@ label {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	width: 50%;
+	margin-right: 10%;
+	/* width: 50%; */
 	justify-content: center;
 }
 
@@ -82,9 +82,10 @@ label {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	width: 50%;
+	/* width: 50%; */
 	align-items: center;
 	justify-content: center;
+	flex-grow: 3;
 }
 
 .buttonApp {
@@ -141,5 +142,15 @@ label {
 
 .thunderstorm {
 	background-image: url('./img/thunderstorm.jpg');
+	background-size: cover;
+}
+
+.drizzle {
+	background-image: url('./img/drizzle.jpg');
+	background-size: cover;
+}
+
+.snow {
+	background-image: url('./img/snow.jpg');
 	background-size: cover;
 }
